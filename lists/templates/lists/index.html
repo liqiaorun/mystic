@@ -1,6 +1,10 @@
-<h1>Sa QiaoRun</h1>
+<h1>豆包儿</h1>
 <ul>
-{% for a in question %}
+{% for a in latest_question_list%}
 <li><a href="{% url 'polls:detail' a.id %}">{{ a.question_text }}</a></li>
 {% endfor %}
 </ul>
+
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'lists/style.css' %}" />
